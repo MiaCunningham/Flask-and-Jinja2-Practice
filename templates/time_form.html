@@ -1,0 +1,16 @@
+<style>
+    .error {  color: red; }
+</style>
+<h1>Validate Time</h1>
+<form action="" method="POST">
+    <label for="">Hours (24-hour format)
+        <input type="text" name="hours" value='{{hours}}' />
+    </label>
+    <p class="error">{{hours_error}}</p>
+    <label>Minutes
+        <input type="text" name="minutes" value='{{minutes}}' />
+    </label>
+    <p class="error">{{minutes_error}}</p>
+    <input type="submit" value="Validate" />
+
+</form>
