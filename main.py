@@ -81,4 +81,10 @@ def  hello():
     return template.render(name = first_name)
 
 
+
+app.route('/todos')
+def todo():
+    template = jinja_env.get_template('todos.html')
+    return template.render()
+
 app.run()
