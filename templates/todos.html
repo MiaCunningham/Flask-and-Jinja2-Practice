@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>   
-    <title>To Do</title>  
-</head>
-<body>
+{% extends 'base.html' %}
+
+ {% block content %}
     <h1>To Dos</h1>
     <form method="POST">
         <label for="task">New Task
@@ -11,5 +8,14 @@
         </label>
         <input type="submit" value="Add Task" />
     </form>
-</body>
-</html>
+        <ul>
+            {% for task in tasks %}
+            <li>{{task}}</li>
+            {% endfor %}
+        </ul>
+
+    {% if tasks|length == 0 %}
+    <p>No tasks yet</p>
+    {% endif %}
+{% endblock %}
+
